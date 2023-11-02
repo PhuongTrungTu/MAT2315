@@ -3,7 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Đọc ảnh đầu vào
-input_image = cv2.imread('Assets/Image/Picture2.png', cv2.IMREAD_GRAYSCALE)
+input_image = cv2.imread('Assets/Image/Test3.png', cv2.IMREAD_GRAYSCALE)
 M, N = input_image.shape
 
 # Bước 1: Chuyển kích thước ảnh
@@ -29,7 +29,7 @@ D = np.sqrt(U**2 + V**2)
 H = 1 / (1 + (D0 / D) ** (2 * n))
 
 # Bước 5: Áp dụng bộ lọc thông cao
-G = np.multiply(F, H)
+G = np.multiply(F, H.T)
 
 
 # Bước 6: Biến đổi ngược IDFT của G
